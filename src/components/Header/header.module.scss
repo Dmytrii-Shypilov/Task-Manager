@@ -1,0 +1,18 @@
+.header {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    border-bottom:  1px solid var(--border-col) ;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--primary-txt-col);
+}

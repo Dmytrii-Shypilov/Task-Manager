@@ -3,7 +3,7 @@ export const projects = [
         id: '768999',
         name: "Project One ",
         description: "Some intresting project about some intresting stuff",
-        contributors: [{id: '123445', name: "Anna Barrow", role: 'assistant'}, {id:"334345",name: "james Milner", role: 'admin'}],
+        contributors: [{id: '123445', name: "Anna Barrow", role: 'assistant'}, {id:"334345",name: "James Milner", role: 'admin'}],
         categories: ['Content'],
         tasks: [{
             category: "Content",

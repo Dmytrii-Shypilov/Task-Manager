@@ -1,0 +1,21 @@
+.section {
+    
+    width: 960px;
+    height: 800px;
+    padding: 20px;
+
+    border-radius: 16px; /// global var
+    background-color: var(--secondary-back-col);
+    box-shadow: var(--shadow);
+}
+
+.descriptionWrapper {
+    margin-bottom: 30px;
+}
+
+.title {
+    color: var(--primary-txt-col);
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-col);
+    text-align: center;
+}

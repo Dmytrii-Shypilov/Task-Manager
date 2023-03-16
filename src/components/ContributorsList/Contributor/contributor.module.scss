@@ -1,0 +1,23 @@
+.contributor {
+    &:not(:last-of-type) {
+        margin-bottom: 10px;
+    }
+}
+
+.icon {
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    font-weight: 600;
+    color: var(--tertiary-txt-col);
+    // border: 1px solid var(--border-col);
+    border-radius: 50%;
+    background-color: var(--tertiary-back-col);
+}
+
+.name {
+    color: var(--primary-txt-col);
+    font-weight: 600;
+}

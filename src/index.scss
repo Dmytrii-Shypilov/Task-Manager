@@ -7,7 +7,9 @@
   --tertiary-back-col: rgb(255, 107, 10);
   --border-col: rgb(226, 229, 232);
   --primary-acc-col: rgb(241, 92, 39);
-  --transition-var: 250ms cubic-bezier(0.4, 0, 0.2, 1)
+  --transition-var: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  --acc-shadow: rgba(60, 64, 67, 0.3) 0px 2px 4px 0px, rgba(60, 64, 67, 0.15) 0px 4px 12px 4px;
 }
 
 

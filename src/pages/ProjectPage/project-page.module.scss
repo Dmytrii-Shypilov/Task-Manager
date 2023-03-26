@@ -2,3 +2,22 @@
 .section {
     padding: 30px 0px;
 }
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+.panelsWrapper {
+    display: flex;
+
+}
+
+.controls {
+    margin-bottom: 25px;
+}
+
+.materials {
+    margin-right: 80px;
+}

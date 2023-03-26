@@ -1,18 +1,26 @@
-import s from "./contributors-list.module.scss";
+import s from './contributors-list.module.scss'
 
-import Contributor from "./Contributor/Contributor";
+import Contributor from './Contributor/Contributor';
+import { useState } from 'react';
 
-const Contributorslist = ({ contributors }) => {
-  const list = contributors.map((contributor) => {
-    return <Contributor contributor={contributor} />;
-  });
 
-  return (
-    <div className={s.wrapper}>
-      <h4 className={s.title}>Contributors:</h4>
-      <ul className={s.list}>{list}</ul>
-    </div>
-  );
-};
+const ContributorsList = ({contributors}) => {
 
-export default Contributorslist;
+    const list = contributors.map((contributor) => {
+        return <Contributor contributor={contributor}/>;
+      });
+
+    return(
+        <div>
+            <ul className={s.list}>{list}</ul>
+            {/* <div className={s.btnWrapper}>
+                <button className='button'>Add</button>
+            </div> */}
+        </div>
+        
+        
+    )
+       
+}
+
+export default ContributorsList

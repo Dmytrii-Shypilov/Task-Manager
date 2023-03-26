@@ -1,1 +1,1 @@
-export {default} from './ContributorsList'
+export {default} from "./ContributorsList"

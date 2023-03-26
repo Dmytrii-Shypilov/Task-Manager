@@ -1,0 +1,14 @@
+
+.listItem {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--primary-txt-col);
+    &:not(:last-of-type) {
+        margin-bottom: 15px;
+    }
+    &:hover{
+        color: var(--primary-acc-col);
+        cursor: pointer;
+    }
+
+}

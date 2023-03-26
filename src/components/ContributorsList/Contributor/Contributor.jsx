@@ -1,15 +1,24 @@
-import s from './contributor.module.scss'
+import { useState, memo } from "react";
+import DeleteIcon from "../../Icons/DeleteIcon";
+import s from "./contributor.module.scss";
 
+const Contributor = ({ contributor }) => {
+  const { name, id, role } = contributor;
+  const titles = (name.split(" ")[0][0] + name.split(" ")[1][0]).toUpperCase();
+  const isAdmin = role === 'admin' ? true : false
 
-const Contributor = ({contributor}) => {
-    const {name, id, role} = contributor
-    const titles = (name.split(" ")[0][0] + name.split(" ")[1][0]).toUpperCase()
-    return(
-        <li key={id} className={s.contributor}>
-            <span className={s.icon}>{titles}</span>
-            <span className={s.name}>{name}</span>
-        </li>
-    )
-}
+  return (
+    <li key={id} id={id} className={s.contributor}>
+      <div>
+        <span className={s.nameIcon}>{titles}</span>
+        <span className={s.name}>{name}</span>
+        {/* {isAdmin && <span>Admin</span>} */}
+      </div>
+      <div className={s.iconThumb}>
+        <DeleteIcon />
+      </div>
+    </li>
+  );
+};
 
-export default Contributor
+export default Contributor;

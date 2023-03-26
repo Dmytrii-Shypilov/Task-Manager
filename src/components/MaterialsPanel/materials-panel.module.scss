@@ -1,0 +1,15 @@
+.panel {
+    width: 350px;
+    padding: 10px;
+    border: 1px solid var(--border-col);
+    border-radius: 16px;
+
+}
+
+.title {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: var(--primary-txt-col);
+    border-bottom: 1px solid var(--border-col);
+}

@@ -1,10 +1,26 @@
 .contributor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     &:not(:last-of-type) {
         margin-bottom: 10px;
     }
+    &:hover {
+        .name {
+            color: var(--primary-acc-col);
+        }
+        .iconThumb {
+            display: block;
+        }
+        .nameIcon {
+            background-color: var(--primary-acc-col);
+        }
+    }
 }
 
-.icon {
+
+
+.nameIcon {
     align-items: center;
     justify-content: center;
     width: 32px;
@@ -14,10 +30,23 @@
     color: var(--tertiary-txt-col);
     // border: 1px solid var(--border-col);
     border-radius: 50%;
-    background-color: var(--tertiary-back-col);
+    background-color: var(--primary-txt-col);
 }
 
 .name {
     color: var(--primary-txt-col);
     font-weight: 600;
+    cursor: pointer;
 }
+
+.nameSelected {
+    @extend .name;
+    color:red; 
+}
+
+.iconThumb {
+    display: none;
+}
+
+
+

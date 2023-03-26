@@ -1,0 +1,18 @@
+.align {
+    display: flex;
+    align-items: center;
+}
+
+.del {
+   @extend .align;
+    fill: var(--secondary-txt-col);
+    &:hover {
+        fill: var(--primary-acc-col);
+        cursor: pointer;
+    }
+}
+
+.doc {
+    @extend .align;
+    stroke: var(--secondary-txt-col);
+}

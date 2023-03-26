@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import MainPage from "./pages/MainPage";
 import ProjectPage from "./pages/ProjectPage";
+import CategoryPage from "./pages/CategoryPage";
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Header/>
       <MainPage/>
       <ProjectPage/>
+      <CategoryPage/>
     </div>
   );
 }

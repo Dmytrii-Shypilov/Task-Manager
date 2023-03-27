@@ -1,14 +1,19 @@
 import s from "./project-page.module.scss";
 
+import { useState } from "react";
+
 import Categories from "../../components/Categories";
 import Container from "../../components/Container";
 import ContributorsPanel from "../../components/ContributorsPanel/ContributorsPanel";
+import CreatorModal from "../../components/CreatorModal/CreatorModal";
 import MaterialsPanel from "../../components/MaterialsPanel";
 import ProjectControls from "../../components/ProjectControls";
 
 import { projects } from "../../data";
 
 const ProjectPage = () => {
+  const [modal, setModal] = useState({isOpen: false, view: null})
+
   return (
     <section>
       <Container>
@@ -27,6 +32,7 @@ const ProjectPage = () => {
             </div>
           </div>
         </div>
+        <CreatorModal/>
       </Container>
     </section>
   );

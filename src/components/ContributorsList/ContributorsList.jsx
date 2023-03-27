@@ -1,7 +1,7 @@
 import s from './contributors-list.module.scss'
 
 import Contributor from './Contributor/Contributor';
-import { useState } from 'react';
+
 
 
 const ContributorsList = ({contributors}) => {

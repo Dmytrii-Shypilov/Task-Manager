@@ -49,6 +49,9 @@ span {
   display: inline-flex;
 }
 
+
+///// COMMON  APP COMPONENTS STYLES ///////
+
 .page-section {
   width: 100%;
   height: 800px;
@@ -78,6 +81,15 @@ span {
     cursor: pointer;
     background-color: var(--primary-acc-col)
   }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 @import "modern-normalize/modern-normalize.css";

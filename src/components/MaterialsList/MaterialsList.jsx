@@ -1,15 +1,23 @@
 import s from "./materials-list.module.scss";
 
+import DeleteIcon from "../Icons/DeleteIcon";
 import DocIcon from "../Icons/DocIcon";
 
 const MaterialsList = ({ materials }) => {
+
+
   const list = materials.map((item) => {
     return (
       <li className={s.listItem}>
-        <div className={s.icon}>
-          <DocIcon />
+        <div className={s.document}>
+          <div className={s.docIcon}>
+            <DocIcon />
+          </div>
+          <span className={s.name}>{item.name}</span>
         </div>
-        <span className={s.name}>{item.name}</span>
+        <div className={s.delIcon}>
+            <DeleteIcon/>
+        </div>
       </li>
     );
   });

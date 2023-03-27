@@ -1,4 +1,4 @@
-import { useState, memo } from "react";
+import { memo } from "react";
 import DeleteIcon from "../../Icons/DeleteIcon";
 import s from "./contributor.module.scss";
 
@@ -21,4 +21,4 @@ const Contributor = ({ contributor }) => {
   );
 };
 
-export default Contributor;
+export default memo(Contributor);

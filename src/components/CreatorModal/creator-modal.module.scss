@@ -1,0 +1,31 @@
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 400px;
+    height: 450px;
+    padding: 15px;
+    border-radius: 16px;
+    background-color: var(--secondary-back-col);
+}
+
+.closeIcon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    fill: var(--secondary-txt-col);
+    transition: fill var(--transition-var);
+    &:hover {
+        fill: var(--primary-acc-col);
+        cursor: pointer;
+    }
+}
+
+.title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: var(--primary-txt-col);
+    text-align: center;
+}
+

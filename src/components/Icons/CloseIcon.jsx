@@ -1,8 +1,9 @@
-import * as React from "react";
+import s from './icons.module.scss'
 
 function CloseIcon(props) {
   return (
     <svg
+    className={s.close}
       viewBox="0 0 512 512"
       height="30"
       width="30"

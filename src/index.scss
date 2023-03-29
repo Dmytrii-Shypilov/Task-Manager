@@ -49,6 +49,10 @@ span {
   display: inline-flex;
 }
 
+fieldset {
+  padding: 0;
+  border: none;
+}
 
 ///// COMMON  APP COMPONENTS STYLES ///////
 
@@ -71,7 +75,10 @@ span {
 }
 
 .button {
-  padding: 3px 8px;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
   border-radius: 12px;
   border-color: transparent;
   background-color: var(--tertiary-back-col);
@@ -92,4 +99,35 @@ span {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+.input-field {
+  display: flex;
+  align-items: center;
+  width: 220px;
+  height: 30px;
+  padding: 0px 5px 0px 5px;
+  border-radius: 5px;
+  border: 1px solid var(--primary-txt-col);
+  font-weight: 600;
+  color: var(--primary-txt-col);
+  outline: none;
+  transition: border var(--transition-var);
+  &:focus {
+    border: 1px solid var(--primary-acc-col);
+  }
+  &:hover {
+    border: 1px solid var(--primary-acc-col);
+  }
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 3px;
+  font-weight: 600;
+  color: var(--primary-txt-col);
+}
+
+
+
 @import "modern-normalize/modern-normalize.css";
+

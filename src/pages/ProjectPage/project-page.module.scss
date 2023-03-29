@@ -15,9 +15,14 @@
 }
 
 .controls {
+    display: flex;
     margin-bottom: 25px;
 }
 
 .materials {
     margin-right: 80px;
+}
+
+.actionForm {
+    margin-left: 160px;
 }

@@ -16,3 +16,7 @@
     @extend .align;
     stroke: var(--secondary-txt-col);
 }
+
+.close {
+    @extend .del
+}

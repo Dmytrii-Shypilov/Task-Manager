@@ -1,0 +1,44 @@
+.form {
+  display: flex;
+  align-items: flex-end;
+}
+
+.fieldset {
+  display: flex;
+  align-items: flex-end;
+  border: none;
+  padding: 0;
+}
+
+.adminBox {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  margin-right: 20px;
+  margin-left: 15px;
+}
+
+.label {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--primary-txt-col);
+}
+
+
+.box {
+  width: 15px;
+  height: 15px;
+  margin-left: 20px;
+  &:checked {
+    accent-color: var(--primary-acc-col);
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btnWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

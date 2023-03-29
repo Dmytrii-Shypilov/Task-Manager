@@ -3,25 +3,39 @@ import s from "./creator-modal.module.scss";
 import { createPortal } from "react-dom";
 
 import CloseIcon from "../Icons/CloseIcon";
-import NameFieldset from "./NameFieldset";
+import CategoryForm from "../CategoryForm";
+import MaterialForm from "../MaterialForm";
+import NameForm from "../NameForm";
 
 const modalRoot = document.querySelector("#modal-root");
 
-const CreatorModal = ({ view }) => {
-  const click = (e) => {
-    e.preventDefault();
-    const form = e.currentTarget;
-    console.dir(form.name.value);
+const CreatorModal = ({ view, setModal }) => {
+  const closeModal = (e) => {
+    if (e.currentTarget.id === 'close-icon' || e.target.id === 'backdrop') {
+      setModal((prevState) => {
+        return {
+          ...prevState,
+          isOpen: false,
+        };
+      });
+      document.body.style.overflow = 'visible'
+    }
+    
   };
+
   return createPortal(
-    <div className="backdrop">
+    <div id="backdrop" className="backdrop" onClick={closeModal}>
       <div className={s.modal}>
-        <CloseIcon className={s.closeIcon} />
-        <h4 className={s.title}>Title</h4>
-        <form action="" >
-          <NameFieldset />
-          <button type="submit">Add</button>
-        </form>
+        <div id="close-icon" onClick={closeModal}>
+        <CloseIcon
+          className={s.closeIcon}
+        />
+        </div>
+      
+        <h4 className={s.title}>{view.toUpperCase()}</h4>
+        {view === "add contributor" && <NameForm />}
+        {view === "add category" && <CategoryForm />}
+        {view === "add material" && <MaterialForm />}
       </div>
     </div>,
     modalRoot

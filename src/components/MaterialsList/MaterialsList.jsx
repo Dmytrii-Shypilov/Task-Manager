@@ -13,7 +13,7 @@ const MaterialsList = ({ materials }) => {
           <div className={s.docIcon}>
             <DocIcon />
           </div>
-          <span className={s.name}>{item.name}</span>
+          <a className={s.name} href="" target="_blank">{item.name}</a>
         </div>
         <div className={s.delIcon}>
             <DeleteIcon/>

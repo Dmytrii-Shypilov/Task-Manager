@@ -1,0 +1,32 @@
+.wrapper {
+    position: relative;
+}
+
+.list {
+    position: absolute;
+    top: 33px;
+    z-index: 1;
+    width: 100%;
+    min-height: 30px;
+    max-height: 124px;
+    border: 1px solid var(--primary-txt-col);
+    border-radius: 5px;
+    overflow-y: auto;
+    background-color: #fff;
+}
+
+.listItem {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding: 0px 5px 0px 5px;
+    font-weight: 600;
+    color: var(--primary-txt-col);
+    &:not(:last-of-type) {
+        border-bottom: 1px solid var(--border-col);
+    }
+    &:hover {
+        color: var(--primary-acc-col);
+        cursor: pointer;
+    }
+}

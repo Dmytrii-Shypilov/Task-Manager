@@ -4,7 +4,6 @@ import ContributorsList from "../ContributorsList";
 
 const ContributorsPanel = ({ contributors }) => {
  
-
   return (
     <div className={s.panel}>
       <h4 className={s.title}>Contributors:</h4>

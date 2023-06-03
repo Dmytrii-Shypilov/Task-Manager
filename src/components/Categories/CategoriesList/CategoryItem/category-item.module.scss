@@ -1,0 +1,18 @@
+.listItem {
+    &:not(:last-of-type) {
+        margin-bottom: 15px;
+    }
+    
+
+}
+
+.link {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--primary-txt-col);
+    text-decoration: none;
+    &:hover{
+        color: var(--primary-acc-col);
+        cursor: pointer;
+    }
+}

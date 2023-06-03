@@ -8,7 +8,8 @@ const ProjectsList = ({ projects }) => {
     const project = {
       name: proj.name,
       description: proj.description,
-      status: proj.status
+      status: proj.status,
+      id: proj.id
     };
 
     return <ListItem project={project} />;

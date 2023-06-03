@@ -1,0 +1,33 @@
+.task {
+  padding: 10px;
+  border: 1px solid var(--border-col);
+  border-radius: 5px;
+  &:not(:last-of-type) {
+    margin-bottom: 5px;
+  }
+  &:hover {
+    cursor: pointer;
+    .name {
+      color: var(--primary-acc-col);
+    }
+  }
+}
+
+.name {
+  font-weight: 600;
+  color: var(--primary-txt-col);
+  margin-bottom: 8px;
+}
+
+.assignee {
+  display: inline-flex;
+  margin-right: 15px;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 12px;
+  background-color: var(--border-col);
+}
+
+.assigner {
+    color: var(--secondary-txt-col);
+}

@@ -1,0 +1,25 @@
+.task {
+    width: 900px;
+    height: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid var(--border-col);
+    border-radius: 16px;
+}
+
+.controlsPanel {
+    margin-bottom: 25px;
+}
+
+.infoBlock {
+    display: flex;
+    justify-content: space-between;
+}
+
+.description {
+    margin-bottom: 20px;
+}
+
+.materials {
+    width: 300px;
+}

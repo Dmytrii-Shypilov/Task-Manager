@@ -1,0 +1,30 @@
+.taskMeta {
+    padding: 10px;
+    border: 1px solid var(--border-col);
+    border-radius: 16px;
+    background-color: var(--primary-back-col);
+}
+
+.tag {
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.listItem {
+    &:not(:last-of-type) {
+        margin-bottom: 10px;
+    }
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 5px;
+    border: 1px solid var(--tertiary-back-col);
+    background-color: var(--tertiary-back-col);
+    border-radius: 6px;
+    color: var(--tertiary-txt-col);
+    line-height: 1;
+    
+}

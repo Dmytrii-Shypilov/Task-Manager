@@ -3,19 +3,17 @@ import s from "./creator-modal.module.scss";
 import { createPortal } from "react-dom";
 
 import CloseIcon from "../Icons/CloseIcon";
-import CategoryForm from "../CategoryForm";
-import MaterialForm from "../MaterialForm";
-import NameForm from "../NameForm";
+import TaskForm from "../TaskForm";
 
 const modalRoot = document.querySelector("#modal-root");
 
-const CreatorModal = ({ view, setModal }) => {
+const CreatorModal = ({ type, setModal }) => {
   const closeModal = (e) => {
     if (e.currentTarget.id === 'close-icon' || e.target.id === 'backdrop') {
       setModal((prevState) => {
         return {
           ...prevState,
-          isOpen: false,
+          isModalOpen: false,
         };
       });
       document.body.style.overflow = 'visible'
@@ -32,10 +30,8 @@ const CreatorModal = ({ view, setModal }) => {
         />
         </div>
       
-        <h4 className={s.title}>{view.toUpperCase()}</h4>
-        {view === "add contributor" && <NameForm />}
-        {view === "add category" && <CategoryForm />}
-        {view === "add material" && <MaterialForm />}
+        <h4 className={s.title}>{type.toUpperCase()}</h4>
+        {type === "add task" && <TaskForm/>}
       </div>
     </div>,
     modalRoot

@@ -1,0 +1,41 @@
+@import "../../index.scss";
+
+.form {
+  width: 220px;
+  margin: 0 auto;
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+.textarea {
+  @extend .input-field;
+  height: 70px;
+}
+
+.dateTime {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date {
+  width: 100px;
+  height: 30px;
+  padding: 0px 5px 0px 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid var(--primary-txt-col);
+}
+
+.time {
+@extend .date;
+  width: 95px;
+}
+
+.btnWrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}

@@ -1,42 +1,38 @@
 import s from "./project-page.module.scss";
 
-import { useState } from "react";
-
-import ActionForm from "../../components/ActionForm";
 import Categories from "../../components/Categories";
 import Container from "../../components/Container";
-import ContributorsPanel from "../../components/ContributorsPanel/ContributorsPanel";
+import ContributorsPanel from "../../components/ContributorsPanel";
+import ControlsPanel from "../../components/ControlsPanel/ControlsPanel";
 import MaterialsPanel from "../../components/MaterialsPanel";
-import ProjectControls from "../../components/ProjectControls";
 
 import MaterialForm from "../../components/MaterialForm";
 
 import { projects } from "../../data";
 
-const ProjectPage = () => {
-  const [form, setForm] = useState({ isOpen: false, view: null });
+import { useParams } from "react-router-dom";
 
+const ProjectPage = () => {
+  const {id} = useParams()
+  console.log(id)
+  const [project] = projects.filter(proj => proj.id === id)
+  console.log(project)
   return (
     <section>
       <Container>
         <div className="page-section">
-          <h2 className="page-title">Project Name</h2>
+          <h2 className="page-title">{project.name}</h2>
           <div className={s.controls}>
-            <ProjectControls setForm={setForm} />
-            {form.isOpen && (
-              <div className={s.actionForm}>
-                <ActionForm view={form.view} setForm={setForm} />
-              </div>
-            )}
+            <ControlsPanel type="project" />
           </div>
 
           <div className={s.wrapper}>
-            <Categories categories={projects[0].categories} />
+            <Categories categories={project.categories} />
             <div className={s.panelsWrapper}>
               <div className={s.materials}>
-                <MaterialsPanel materials={projects[0].materials} />
+                <MaterialsPanel materials={project.materials} />
               </div>
-              <ContributorsPanel contributors={projects[0].contributors} />
+              <ContributorsPanel contributors={project.contributors} />
             </div>
           </div>
         </div>

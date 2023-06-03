@@ -1,6 +1,6 @@
 :root {
-  --primary-txt-col:#36454F;
-  --secondary-txt-col: #504A4B;
+  --primary-txt-col: #36454f;
+  --secondary-txt-col: #504a4b;
   --tertiary-txt-col: #fff;
   --primary-back-col: rgb(240, 240, 240);
   --secondary-back-col: #fff;
@@ -8,10 +8,11 @@
   --border-col: rgb(226, 229, 232);
   --primary-acc-col: rgb(241, 92, 39);
   --transition-var: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  --shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-  --acc-shadow: rgba(60, 64, 67, 0.3) 0px 2px 4px 0px, rgba(60, 64, 67, 0.15) 0px 4px 12px 4px;
+  --shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  --acc-shadow: rgba(60, 64, 67, 0.3) 0px 2px 4px 0px,
+    rgba(60, 64, 67, 0.15) 0px 4px 12px 4px;
 }
-
 
 body {
   margin: 0;
@@ -22,16 +23,17 @@ body {
   background-color: var(--primary-back-col);
 }
 
-
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
@@ -58,7 +60,7 @@ fieldset {
 
 .page-section {
   width: 100%;
-  height: 800px;
+  // height: 800px;
   padding: 20px;
 
   border-radius: 16px; /// global var
@@ -74,6 +76,14 @@ fieldset {
   text-align: center;
 }
 
+.section-title {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: var(--primary-txt-col);
+  border-bottom: 1px solid var(--border-col);
+}
+
 .button {
   display: flex;
   height: 30px;
@@ -81,12 +91,13 @@ fieldset {
   align-items: center;
   border-radius: 12px;
   border-color: transparent;
+  line-height: 1;
   background-color: var(--tertiary-back-col);
   color: var(--tertiary-txt-col);
   transition: background-color var(--transition-var);
   &:hover {
     cursor: pointer;
-    background-color: var(--primary-acc-col)
+    background-color: var(--primary-acc-col);
   }
 }
 
@@ -127,7 +138,4 @@ fieldset {
   color: var(--primary-txt-col);
 }
 
-
-
 @import "modern-normalize/modern-normalize.css";
-
